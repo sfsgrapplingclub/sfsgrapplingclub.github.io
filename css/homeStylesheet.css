@@ -1,0 +1,116 @@
+
+main {
+    padding-top: 55px;
+}
+
+#clubPhotoRow {
+    background-color: white;
+    height: 30vh;
+    
+}
+
+#ExecPhoto {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+#ExecMainCol{
+    color: #676767;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F8F8F8; 
+    text-align: center;
+}
+
+#meeting-times-row {
+    color: black;
+    padding-bottom: 10px;
+    background-color: #F8F8F8;
+
+}
+
+#MeetingTimesHead{
+    color: #676767;
+    background-color: #F8F8F8;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+#MeetingTimetableCol {
+    text-align: center;
+    padding-top: 5px;
+}
+
+#MeetingTimetableRow {
+    background-color: #3498db;
+}
+
+#bottomBar li {
+    display: inline;
+    color: white;
+    
+}
+
+#link{
+    color: white;
+    text-decoration: none;
+}
+
+#link:hover {
+    color: gray;
+}
+
+#bottombarinfo {
+    color: white;
+    list-style: none;
+    padding-left:5px;
+    margin-bottom: 0;
+    padding-bottom: 10px;;
+    padding-top: 10px;;
+}
+
+#bottomBar{
+    padding-left: 3vh;
+    margin-bottom: 0;
+}
+
+#link {
+    text-decoration: none;
+}
+
+#bottomBarOut{
+   background-color: black;
+}
+
+#IframeContainer{
+    align-content: center;
+}
+
+#calendar {
+    padding-bottom: 20px;
+    border: 0 ;
+}
+#meetingRightCol {
+    text-align: left;
+}
+
+#borderMiddle {
+    height: 4px;
+}
+
+@media only screen and (max-width: 700px) {
+  #IframeContainer {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #IframeContainer {
+    height: 50vh;
+  }
+}
