@@ -231,7 +231,29 @@
     </div>
 </main><!-- /.container -->
 
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
 
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+		apiKey: "AIzaSyB-ilWDuvclBeWxJOMpOUt_bHWKjrGLX0k",
+		authDomain: "grappling-club-website.firebaseapp.com",
+		databaseURL: "https://grappling-club-website.firebaseio.com",
+		projectId: "grappling-club-website",
+		storageBucket: "grappling-club-website.appspot.com",
+		messagingSenderId: "78058458762",
+		appId: "1:78058458762:web:80b41a6b285f7d892d6773",
+		measurementId: "G-5WN6F7H8FW"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  firebase.analytics();
+	</script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
