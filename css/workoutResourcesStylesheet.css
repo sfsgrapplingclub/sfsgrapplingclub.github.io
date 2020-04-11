@@ -13,6 +13,13 @@
 	margin-right: auto;
 }
 
+@media only screen and (max-width: 600px) {
+  #titlecol p{
+    width: 95%;
+  }
+}
+
+
 #workoutcol {
 	padding-top: 3vh;
 	text-align: center;
@@ -21,3 +28,21 @@
 .list-group-item.active {
 background-color: #3498db;
 border-color: #3498db; }
+
+#enduranceRowSm, #workoutcolSm {
+	margin-bottom: 3vh;
+	width: 90%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+#workoutcolSm h3 {
+	text-align: center;
+}
+
+
+#workoutcolSm h3{
+	padding-top: 3vh;
+}
