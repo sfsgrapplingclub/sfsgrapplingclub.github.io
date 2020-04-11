@@ -7,7 +7,7 @@
     <meta name="description" content="Grappling Club Website">
     <meta name="author" content="Jacob">
     <link rel="icon" href="./images/Logo.png">
-    <title>Grappling Club</title>
+    <title>Moves - Grappling Club</title>
 
     
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,20 +34,32 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                     <a class="dropdown-item" href="workoutResources.html">Workout</a>
                     <a class="dropdown-item" href="#">Flexibility</a>
-                    <a class="dropdown-item" href="grapplingMoves.html">Grappling Moves<span class="sr-only">(current)</span></a>
+                    <a class="dropdown-item" href="grapplingMoves.html">Grappling Moves</a>
                 </div>
             </li>
+        </ul>
+		<ul class="nav navbar-nav navbar-right">
+                <li id="adminLoginBtn">
+                    <div class="btn-nav">
+						<a class="nav-link" href="loginPage.html">Admin Login</a>
+                    </div>
+                </li>
+				<li id="adminLogOutBtn" style="display: none">
+                    <div class="btn-nav">
+						<a class="nav-link" href="#" onclick="logout()">Logout</a>
+                    </div>
+                </li>
         </ul>
     </div>
 </nav>
@@ -128,14 +140,8 @@
     </div> !-->
 </main>
 	
-		<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-
-	<!-- TODO: Add SDKs for Firebase products that you want to use
-		 https://firebase.google.com/docs/web/setup#available-libraries -->
-	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
-
-	<script>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
 	  // Your web app's Firebase configuration
 	  var firebaseConfig = {
 		apiKey: "AIzaSyB-ilWDuvclBeWxJOMpOUt_bHWKjrGLX0k",
@@ -149,9 +155,9 @@
 	  };
 	  // Initialize Firebase
 	  firebase.initializeApp(firebaseConfig);
-	  firebase.analytics();
 	</script>
-	
+	<script type="text/javascript" src="./js/grapplingMoves.js"></script>
+    
 </body>
     
     <!-- Bootstrap core JavaScript
