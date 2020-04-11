@@ -1,0 +1,23 @@
+
+#titleRow {
+    padding-top: 75px;
+    text-align: center;
+    color: #676767;
+	border-bottom: 1px solid #dee2e6;
+}
+
+#titlecol p{
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#workoutcol {
+	padding-top: 3vh;
+	text-align: center;
+}
+
+.list-group-item.active {
+background-color: #3498db;
+border-color: #3498db; }
