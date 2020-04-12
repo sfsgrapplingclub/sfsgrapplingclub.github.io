@@ -73,15 +73,57 @@
                 <p>A variety of grappling moves are listed in the table below. Moves will constantly be added.</p>
                 <br>
                 <p id="smallScreenWarning">It appears your screen size is small. Therefore move descriptions have been hidden by default. If you would like to see descriptions, press the button</p>
-                <button id="showhidedescbtn" type="button" class="btn btn-light mx-auto" onclick="hideShowDesc();">Show Descriptions</button> 
+                <button id="showhidedescbtn" type="button" class="btn btn-light mx-auto" onclick="hideShowDesc();">Show Descriptions</button>
+				<p id="addmovesBtndesc">You are logged in as an admin. However your screen size is too small to add moves. Consider going into landscape mode or using a computer.</p>
             </div>
         </div>
         
+	 <div id="newMoveWrapper">
+	 	<div class="row" id="moveEditorRow">
+	 		<div class="col" id="newmovecol">
+			 	<h2>Add A Move</h2>
+				<table class="table table-bordered table-responsive-lg" id="newMoveTable">
+					 <tr id="tablehead" class="header">
+                        <th style="width: 30%; min-width: 250px;">Select Image / Video: <br>
+						 	<button class="btn"  id="youtubeUrlBtn" onclick="youtubeUrl()">Youtube Url</button>
+							<button class="btn" id="imageUrlBtn" onclick="imageUrl()">Image Url</button>
+							<button class="btn" id="uploadImgBtn" onclick="uploadImage()">Upload Image</button>
+						 
+						 </th>
+                        <th style="width 20%; min-width: 140px;">Move Name and Type</th>
+                        <th id="descColumn">Description</th>
+                    </tr>
+					<tr>
+                        <td>
+							<input type="file" accept="image/*" capture="move" id="imageInput">
+							<input type="text" id="imageUrl" placeholder="Paste image URL here">
+							<input type="text" id="youtubeUrl" placeholder="Paste youtube link here">
+							
+						</td>
+                        <td><div contenteditable class="empty" id="newmovename">Edit Move Name Here</div></td>
+                        <td><div contenteditable class="empty" id="newdesc">Write the description here</div></td>
+                    </tr>
+				</table>
+			</div>
+		 </div>
+		 <div class="row">
+			<div class="col" id="uploadBtnCol">
+				<p id="errorMsg">123</p>
+				<p id="uploadedMsg">Successfully Uploaded / Made new row! Reload the page and search the table to find it.</p>
+				<button class="btn btn-success" id="uploadMoveBtn" onclick="sendNewMove()">Upload Move</button>
+			 </div>
+		 </div>
+	 
+	 </div>
+	 
+	 
+	 
         <div class="row" id="searchBarRow">
-            <div class="col">
+            <div class="col" id="inputcol">
                 <input type="text" id="moveSearchBar" onkeyup="moveTableSearch()" placeholder="Search for a move or a type of move">
-                
+               	<button id="addmovesBtn" onclick="openMoveEditor()">Add Moves</button>
             </div>
+			
         </div>
         
         <div class="row" id="tableRowContainer">
@@ -91,31 +133,6 @@
                         <th style="width: 30%; min-width: 250px;">Video / Image</th>
                         <th style="width 20%; min-width: 140px;">Move Name and Type</th>
                         <th id="descColumn">Description</th>
-                    </tr>
-                    <tr>
-                        <td><img src="images/armbar.jpg" width="100%"></td>
-                        <td>Basic Armbar</td>
-                        <td>This is the most basic type of arm bar. This move puts significant stress on the elbow causing the opponent to tap.</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/fullmount.jpg" width="100%"></td>
-                        <td>Full Mount Position</td>
-                        <td>This is called full mount. The person on the top has a significant advantage.</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/sidemount.jpg" width="100%"></td>
-                        <td>Side Mount Position</td>
-                        <td>This position is called side mount, the person on top has a significant advantage. It is difficult to escape from this position. </td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/guard.png" width="100%"></td>
-                        <td>Guard Position</td>
-                        <td>This is called the Guard Position. It is a relatively neutral position, however the person on the outside has a </td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/spiderguard.jpg" width="100%"></td>
-                        <td>Spider Guard Position</td>
-                        <td>This position is called spider guard. It us a useful guard that provides many opportunities.</td>
                     </tr>
                 </table>
             </div>
@@ -155,6 +172,7 @@
 	  };
 	  // Initialize Firebase
 	  firebase.initializeApp(firebaseConfig);
+	  var database = firebase.database();
 	</script>
 	<script type="text/javascript" src="./js/grapplingMoves.js"></script>
     

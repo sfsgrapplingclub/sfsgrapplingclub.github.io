@@ -68,6 +68,7 @@ usernameInput.addEventListener("keyup", function(event) {
     document.getElementById("login-form-submit").click();
   }
 });
+
 passwordInput.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
