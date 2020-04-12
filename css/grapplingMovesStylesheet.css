@@ -29,10 +29,19 @@ body {
     color: #676767;
 }
 
+#addmovesBtndesc {
+	display: none;
+}
+
  
 #grapplingTable tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+#newMoveTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 
 #smallScreenWarning {
     display: none;
@@ -56,6 +65,15 @@ body {
 #showhidedescbtn {
     display: block;
     }
+	
+#addmovesBtn {
+		display: none;
+	}
+
+	#addmovesBtndesc {
+		display: block
+	}
+	
 }
 
 
@@ -129,3 +147,78 @@ body{
 }
 
 
+
+#inputcol {
+	position: relative;
+}
+
+#inputcol button{
+	position: absolute;
+	float: right;
+	margin-left: -107px;
+	padding: 12px 12px 12px 12px;
+	background-color: #3498db;
+	color: white;
+}
+
+#addmovesBtn:hover {
+	background-color: #2980b9;
+}
+
+
+
+#moveEditorRow {
+
+}
+
+#uploadBtnCol {
+	text-align: center;
+	padding-bottom: 3vh;
+}
+
+
+
+#newmovecol h2{
+	text-align: center;
+}
+
+#uploadImgBtn {
+	color: white;
+	background-color: #2980b9;
+}
+
+#youtubeUrlBtn, #imageUrlBtn {
+	color: white;
+	background-color: #3498db;
+}
+
+#youtubeUrlBtn:hover, #imageUrlBtn:hover, #uploadImgBtn:hover {
+	background-color: #2980b9;
+}
+
+
+#youtubeUrl, #imageUrl  {
+	display: none;
+}
+
+#errorMsg {
+	color: red;
+	display: none;
+}
+
+#newMoveWrapper {
+	display: none;
+}
+
+#uploadedMsg {
+	color: green;
+	display: none;
+}
+
+#newmovename {
+	max-width: 220px;;
+}
+
+#newdesc {
+	max-width: 650px;;
+}
