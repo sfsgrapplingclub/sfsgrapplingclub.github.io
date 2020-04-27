@@ -34,17 +34,17 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources <span class="sr-only">(current)</span></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                     <a class="dropdown-item" href="workoutResources.html">Workout</a>
-                    <a class="dropdown-item" href="#">Flexibility</a>
+                    <a class="dropdown-item" href="flexibility.html">Flexibility</a>
                     <a class="dropdown-item" href="grapplingMoves.html">Grappling Moves</a>
                 </div>
             </li>
@@ -70,7 +70,7 @@
         <div class="row" id="titleRow">
             <div class="col">
                 <h1 style="font-weight: bold">Grappling Moves</h1>
-                <p>A variety of grappling moves are listed in the table below. Moves will constantly be added.</p>
+                <p>A variety of grappling moves are listed in the table below. Moves will constantly be added. NOTE: If the video embeds are not working for you, change your browser to Chrome, then the videos will appear</p>
                 <br>
                 <p id="smallScreenWarning">It appears your screen size is small. Therefore move descriptions have been hidden by default. If you would like to see descriptions, press the button</p>
                 <button id="showhidedescbtn" type="button" class="btn btn-light mx-auto" onclick="hideShowDesc();">Show Descriptions</button>
@@ -135,6 +135,12 @@
                         <th id="descColumn">Description</th>
                     </tr>
                 </table>
+				<div class="align-items-center" id="moveLoadContainer">
+					<div class="spinner-border m-3" role="status" id="moveLoader" id="spinner">
+						<span class="sr-only" id="loadText">Loading Moves...</span>
+					</div>
+					<strong>Loading Moves...</strong>
+				</div>
             </div>
         </div>
 

@@ -1,7 +1,14 @@
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
+	  
+		if ($(window).width() < 720) {
+		   document.getElementById("addmovesBtndesc").style.display = "block";
+		} else {
+			document.getElementById("addmovesBtndesc").style.display = "none";
+		}
 
+	  
 	  
 	  document.getElementById("adminLogOutBtn").style.display = "block";
 	  document.getElementById("adminLoginBtn").style.display = "none";
@@ -30,8 +37,10 @@ var database = firebase.database();
 function tableData(){
 	
 	 database.ref('/TableRows').once('value', function(snapshot){
-		console.log("testing123");
         if(snapshot.exists()){
+			
+			document.getElementById("moveLoadContainer").style.display = "none";
+			
             var content = '';
             snapshot.forEach(function(data){
                 var val = data.val();
@@ -48,17 +57,22 @@ function tableData(){
                 content += '</tr>';
             });
             $('#grapplingTable').append(content);
-        }
+        } else {
+			document.getElementById("moveLoadContainer").style.display = "none";
+		}
     });
 }
 
 function openMoveEditor(){
-	console.log("Function called");
+
 	firebase.auth().onAuthStateChanged(function(user) {
   	if (user) {
    		
-		document.getElementById("newMoveWrapper").style.display = "block";
-		
+		if (document.getElementById("newMoveWrapper").style.display == "none"){
+			document.getElementById("newMoveWrapper").style.display = "block";
+		} else {
+			document.getElementById("newMoveWrapper").style.display = "none";
+		}
 		
 	} else {
 		console.log("Not Verified!");
@@ -68,22 +82,35 @@ function openMoveEditor(){
 }
 
 
+let imageURLInput = document.getElementById("imageUrl");
+let youtubeURLInput = document.getElementById("youtubeUrl");
+let imageUploadInput = document.getElementById("imageInput");
+
 function sendNewMove(){
 	
 		let moveName = $('#newmovename').html();
 		let description = $('#newdesc').html();
 		let newUploadedImageUrl = null;
+	
+	if (youtubeUrlBtn && youtubeURLInput.value == ""){
+			uploadError();
 		
+		} else if (imageUrlBtn && imageURLInput.value == "") {
+			uploadError();
+			
+		} else if (uploadImageBtn && imageUploadInput.files.length == 0){
+			uploadError();
+		
+		} else {
+	
 	if(description == "" || moveName == "" || description == "Write the description here" || moveName == "Edit Move Name Here") {
 		
-		document.getElementById("uploadedMsg").style.display = "none";
-		document.getElementById("errorMsg").style.display = "block";
-		document.getElementById("errorMsg").innerHTML = "Error! You must write a description, move name, and add an image / video link / image url";
+		uploadError();
 		
 	} else {
 		
 		document.getElementById("uploadedMsg").style.display = "none";
-		document.getElementById("errorMsg").style.display == "none";
+		document.getElementById("errorMsg").style.display = "none";
 		
 		if (youtubeUrlBtn == true){
 			document.getElementById("uploadMoveBtn").disabled = true;
@@ -111,13 +138,9 @@ function sendNewMove(){
 		}
 		
 		function sendData(imgLink, videoId, desc, movetype, isVid){
-			
-			console.log("Send Data")
 			let dataRef = database.ref('/TableRows').push();
 			
 			if (!isVid && videoId == ""){
-				
-				console.log("Uploading 999999");
 				
 				  dataRef.set({
 					desc: desc,
@@ -129,6 +152,8 @@ function sendNewMove(){
 			document.getElementById("uploadMoveBtn").disabled = false;
 			$('.empty').empty();
 			$('.empty').empty();
+			imageURLInput.value = "";
+			$("#imageInput").replaceWith($("#imageInput").val('').clone(true));
 				
 			} else if (isVid){
 				
@@ -139,14 +164,23 @@ function sendNewMove(){
 					video: isVid
 				  });
 			document.getElementById("uploadedMsg").style.display = "block";
+			document.getElementById("errorMsg").style.display = "none";
 			$('.empty').empty();
 			$('.empty').empty();
+			youtubeURLInput.value = "";
 			}
 			document.getElementById("uploadMoveBtn").disabled = false;
 		}
 		
 	}	
+}
 
+}
+
+function uploadError(){
+		document.getElementById("uploadedMsg").style.display = "none";
+		document.getElementById("errorMsg").style.display = "block";
+		document.getElementById("errorMsg").innerHTML = "Error! You must write a description, move name, and add an image / video link / image url";
 }
 
 async function uploadImg(){
@@ -163,10 +197,7 @@ async function uploadImg(){
 			
 			const data = task.then(snapshot => snapshot.ref.getDownloadURL())
 			  .then((url) => {
-				//console.log(url);
-				console.log("Successfully uploaded image");
 				return url
-
 			  })
 			 .catch(console.error);
 		
@@ -225,10 +256,4 @@ function getId(url) {
         return 'error';
     }
 }
-
-
-
-
-
-
-									   
+								   

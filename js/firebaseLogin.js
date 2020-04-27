@@ -30,15 +30,21 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 function login(){
 
+	document.getElementById("login-form-submit").disabled = true;
+	document.querySelector('#login-form-submit').innerHTML = 'Signing In...';
+	
+	
   var userEmail = document.getElementById("email_field").value;
   var userPass = document.getElementById("password_field").value;
 
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
     // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-
-    window.alert("Error : " + errorMessage);
+	  document.getElementById("login-form-submit").disabled = false;
+	  document.querySelector('#login-form-submit').innerHTML = 'Submit';
+	  document.getElementById('email_field').setAttribute("class", "is-invalid form-control");
+	  document.getElementById('password_field').setAttribute("class", "is-invalid form-control");
+	  document.getElementById("invalidUserPass").style.display = "block";
+	  
 
     // ...
   });
@@ -46,7 +52,11 @@ function login(){
 }
 
 function logout(){
-  firebase.auth().signOut();
+  	firebase.auth().signOut();
+	document.getElementById("login-form-submit").disabled = false;
+	document.querySelector('#login-form-submit').innerHTML = 'Submit';
+	$('#email_field').val("");
+	$('#password_field').val("");
 }
 window.onload = function() {
 	document.getElementById("email_field").value = '';

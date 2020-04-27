@@ -52,30 +52,6 @@ body {
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 720px) {
-   
-#grapplingTable td:last-child, th:last-child {
-    display: none;
-       }   
-#smallScreenWarning {
-    display: block;
-    }
-    
-    
-#showhidedescbtn {
-    display: block;
-    }
-	
-#addmovesBtn {
-		display: none;
-	}
-
-	#addmovesBtndesc {
-		display: block
-	}
-	
-}
-
 
 #tablehead{
    /* background-color: #3498db;*/
@@ -222,3 +198,33 @@ body{
 #newdesc {
 	max-width: 650px;;
 }
+
+@media only screen and (max-width: 720px) {
+   
+#grapplingTable td:last-child, th:last-child {
+    display: none;
+       }   
+#smallScreenWarning {
+    display: block;
+    }
+    
+    
+#showhidedescbtn {
+    display: block;
+    }
+	
+#addmovesBtn {
+		display: none;
+	}
+	
+}
+
+#moveLoadContainer {
+	width: 215px;
+  	display: -ms-flexbox;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
