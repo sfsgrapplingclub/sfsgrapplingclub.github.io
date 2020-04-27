@@ -1,0 +1,230 @@
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+   min-height: 100vh;
+
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+
+#grapplingTable {
+
+}
+
+#tableRowContainer {
+    padding-top: 1vh;
+}
+
+
+
+#titleRow {
+    padding-top: 75px;
+    text-align: center;
+    color: #676767;
+}
+
+#addmovesBtndesc {
+	display: none;
+}
+
+ 
+#grapplingTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#newMoveTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+#smallScreenWarning {
+    display: none;
+}
+
+#showhidedescbtn {
+    display: none;
+    margin-bottom: 20px;
+}
+
+
+#tablehead{
+   /* background-color: #3498db;*/
+}
+/*
+td:first-child, th:first-child {
+        border-left: 1px solid #3498db;
+        border-right: 1px solid #3498db;
+    }*/
+#moveSearchBar {
+    background-image: url('https://www.w3schools.com/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #dee2e6;
+}
+
+#bottomBar li {
+    display: inline;
+    color: white;
+    
+}
+
+#link{
+    color: white;
+    text-decoration: none;
+}
+
+#link:hover {
+    color: gray;
+}
+
+#bottombarinfo {
+    color: white;
+    list-style: none;
+    padding-left:5px;
+    margin-bottom: 0;
+    padding-bottom: 10px;;
+    padding-top: 10px;;
+}
+
+#bottomBar{
+    padding-left: 3vh;
+    margin-bottom: 0;
+}
+
+#link {
+    text-decoration: none;
+}
+
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+
+
+#body {
+   padding:10px;
+   padding-bottom:10px;   /* Height of the footer */
+}
+
+
+
+#descColumn {
+    width: 50%;
+    min-width: 300px;
+}
+
+
+
+#inputcol {
+	position: relative;
+}
+
+#inputcol button{
+	position: absolute;
+	float: right;
+	margin-left: -107px;
+	padding: 12px 12px 12px 12px;
+	background-color: #3498db;
+	color: white;
+}
+
+#addmovesBtn:hover {
+	background-color: #2980b9;
+}
+
+
+
+#moveEditorRow {
+
+}
+
+#uploadBtnCol {
+	text-align: center;
+	padding-bottom: 3vh;
+}
+
+
+
+#newmovecol h2{
+	text-align: center;
+}
+
+#uploadImgBtn {
+	color: white;
+	background-color: #2980b9;
+}
+
+#youtubeUrlBtn, #imageUrlBtn {
+	color: white;
+	background-color: #3498db;
+}
+
+#youtubeUrlBtn:hover, #imageUrlBtn:hover, #uploadImgBtn:hover {
+	background-color: #2980b9;
+}
+
+
+#youtubeUrl, #imageUrl  {
+	display: none;
+}
+
+#errorMsg {
+	color: red;
+	display: none;
+}
+
+#newMoveWrapper {
+	display: none;
+}
+
+#uploadedMsg {
+	color: green;
+	display: none;
+}
+
+#newmovename {
+	max-width: 220px;;
+}
+
+#newdesc {
+	max-width: 650px;;
+}
+
+@media only screen and (max-width: 720px) {
+   
+#grapplingTable td:last-child, th:last-child {
+    display: none;
+       }   
+#smallScreenWarning {
+    display: block;
+    }
+    
+    
+#showhidedescbtn {
+    display: block;
+    }
+	
+#addmovesBtn {
+		display: none;
+	}
+	
+}
+
+#moveLoadContainer {
+	width: 215px;
+  	display: -ms-flexbox;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+

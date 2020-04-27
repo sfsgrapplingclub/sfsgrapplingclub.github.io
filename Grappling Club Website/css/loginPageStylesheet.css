@@ -1,0 +1,79 @@
+#titleRow {
+    padding-top: 75px;
+    text-align: center;
+    color: #676767;
+}
+
+
+#error-msg-second-line {
+  display: block;
+}
+
+
+
+#login_div input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#invalidUserPass {
+	color: #dc3746;
+	margin-bottom: 5px;
+	display: none;
+}
+
+#logincol {
+	text-align: center;
+	align-content: center;
+}
+
+#logoutcol {
+	text-align: center;
+	align-content: center;
+	color: #676767;
+}
+
+#email_field, #password_field {
+	width: 300px;
+	margin-bottom: 1vh;
+}
+
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#login-form-submit {
+  width: 300px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3498db;
+  cursor: pointer;
+  outline: none;
+}
+
+#login-form-submit:hover {
+	background-color: #2980b9;
+}
+
+#logoutBtn {
+  width: 100px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #e74c3c;
+  cursor: pointer;
+  outline: none;
+}
+
+#logoutBtn:hover {
+	background-color: #c0392b;
+}
