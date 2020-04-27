@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Grappling Club Website">
+    <meta name="author" content="Jacob">
+    <link rel="icon" href="./images/Logo.png">
+    <title>Grappling Club</title>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  
+    <!-- Place your stylesheet here-->
+ <link href="./css/homeStylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #3498db">
+    <a class="navbar-brand" href="index.html">
+    <img src="./images/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Grappling Club
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="workoutResources.html">Workout</a>
+                    <a class="dropdown-item" href="flexibility.html">Flexibility</a>
+                    <a class="dropdown-item" href="grapplingMoves.html">Grappling Moves</a>
+                </div>
+            </li>
+        </ul>
+		<ul class="nav navbar-nav navbar-right">
+                <li id="adminLoginBtn">
+                    <div class="btn-nav">
+						<a class="nav-link" href="loginPage.html">Admin Login</a>
+                    </div>
+                </li>
+				<li id="adminLogOutBtn" style="display: none">
+                    <div class="btn-nav">
+						<a class="nav-link" href="#" onclick="logout()">Logout</a>
+                    </div>
+                </li>
+        </ul>
+    </div>
+</nav>
+
+  
+<main role="main" class="container-fluid">
+        
+        <div id="clubPhotoRow" class="row">
+        <div class="col">
+            <p>Grappling Club Photo goes here</p>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col" id="ExecMainCol">
+        <h1 style="font-weight: bold">Welcome to the Grappling Club</h1>
+            <div class="row">
+                    <div class="col-sm my-auto  d-none d-md-block" id="ExecCol" style="text-align: center">
+                        <div>
+                            <img src="./images/Logo.png" height="150" width="150" id="ExecPhoto">
+                            <a>Executive 1</a>
+                        </div>     
+                    </div>
+                     <div class="col-sm my-auto d-none d-md-block" id="ExecCol" style="text-align: center">
+                        <div>
+                            <img src="./images/Logo.png" height="150" width="150" id="ExecPhoto">
+                            <a>Executive 1</a>
+                        </div>     
+                    </div>
+                     <div class="col-sm my-auto d-none d-md-block" id="ExecCol" style="text-align: center">
+                        <div>
+                            <img src="./images/Logo.png" height="150" width="150" id="ExecPhoto">
+                            <a>Executive 1</a>
+                        </div>     
+                    </div>
+                     <div class="col-sm my-auto d-none d-md-block" id="ExecCol" style="text-align: center">
+                        <div>
+                            <img src="./images/Logo.png" height="150" width="150" id="ExecPhoto">
+                            <a>Executive 1</a>
+                        </div>     
+                    </div> 
+                
+                
+                
+                    <div class="col-6 my-auto d-md-none" id="ExecCol" style="text-align: center; padding-bottom: 3vh">
+                        <div>
+                            <img src="./images/Logo.png" height="130" width="130" id="ExecPhoto">
+                            <a>Executive 1</a>
+                        </div>     
+                    </div>
+                    <div class="col-6 my-auto d-md-none" id="ExecCol" style="text-align: center; padding-bottom: 3vh">
+                        <div>
+                            <img src="./images/Logo.png" height="130" width="130" id="ExecPhoto">
+                            <a>Executive 1</a>
+                        </div>     
+                    </div> 
+            </div>
+            <div class="row">
+                <div class="col-6 my-auto d-md-none" id="ExecCol" style="text-align: center">
+                        <div>
+                            <img src="./images/Logo.png" height="130" width="130" id="ExecPhoto">
+                            <a>Executive 1</a>
+                        </div>     
+                    </div>
+                    <div class="col-6 my-auto d-md-none" id="ExecCol" style="text-align: center">
+                        <div>
+                            <img src="./images/Logo.png" height="130" width="130" id="ExecPhoto">
+                            <a>Executive 1</a>
+                        </div>     
+                    </div> 
+            </div>
+            
+    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col" id="borderMiddle">
+            
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col" id="MeetingTimesHead">
+            <h1>Meeting Times</h1>
+        </div>
+    </div>
+    
+    <div class="row" id="meeting-times-row">
+        <div class="col d-none d-md-block" id="meetingLeftCol">
+            <div id="MeetingCarousel" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                  <ul class="carousel-indicators">
+                    <li data-target="#MeetingCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#MeetingCarousel" data-slide-to="1"></li>
+                    <li data-target="#MeetingCarousel" data-slide-to="2"></li>
+                  </ul>
+
+                  <!-- The slideshow -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./images/placeholder1.jpg" alt="" width="100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/placeholder1.jpg" alt="" width="100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/placeholder1.jpg" alt="" width="100%">
+                    </div>
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="carousel-control-prev" href="#MeetingCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#MeetingCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+                </div>
+        </div>
+        <div class="col" id="meetingRightCol">
+            <p>The grappling club meets once every two weeks</p>
+        </div>
+    
+    </div>
+    
+    <div class="row">
+        <div class="col my-auto d-md-none">
+            <div id="MeetingCarousel2" class="carousel slide" data-ride="carousel" style="padding-bottom: 10px">
+
+                    <!-- Indicators -->
+                  <ul class="carousel-indicators">
+                    <li data-target="#MeetingCarousel2" data-slide-to="0" class="active"></li>
+                    <li data-target="#MeetingCarousel2" data-slide-to="1"></li>
+                    <li data-target="#MeetingCarousel2" data-slide-to="2"></li>
+                  </ul>
+
+                  <!-- The slideshow -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./images/placeholder1.jpg" alt="" width="100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/placeholder1.jpg" alt="" width="100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/placeholder1.jpg" alt="" width="100%">
+                    </div>
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="carousel-control-prev" href="#MeetingCarousel2" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#MeetingCarousel2" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+                </div>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center" id="MeetingTimetableRow">
+        <div class="col-12 col-lg-9 col-md-10" id="MeetingTimetableCol">
+            <h1 style="color: white">Meeting Timetable</h1>
+            <div class="embed-responsive embed-responsive-16by9 xy-auto" id="IframeContainer">
+                <iframe id="calendar" src="https://calendar.google.com/calendar/embed?src=seoulforeign.org_classroom6343287c%40group.calendar.google.com&ctz=Asia%2FSeoul" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="bottomBarOut">
+            
+        <div class="col-5 col-lg-3 col-md-3 my-auto">
+              <ul id="bottombarinfo">
+                <li>Grappling Club</li>
+                  <div class="d-none d-lg-block">
+                   <li style="font-size: 1%">Email: sfsgrapplingclub@gmail.com</li>
+                  </div>
+            </ul>
+        </div>
+        <div class="col-6 my-auto">
+            <ul id="bottomBar">
+                <li><a href="about.html#contactUsRow" id="link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</main><!-- /.container -->
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+		apiKey: "AIzaSyB-ilWDuvclBeWxJOMpOUt_bHWKjrGLX0k",
+		authDomain: "grappling-club-website.firebaseapp.com",
+		databaseURL: "https://grappling-club-website.firebaseio.com",
+		projectId: "grappling-club-website",
+		storageBucket: "grappling-club-website.appspot.com",
+		messagingSenderId: "78058458762",
+		appId: "1:78058458762:web:80b41a6b285f7d892d6773",
+		measurementId: "G-5WN6F7H8FW"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	</script>
+	<script type="text/javascript" src="./js/loggedin.js"></script>
+	
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>
